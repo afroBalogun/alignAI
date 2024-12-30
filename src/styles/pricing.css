@@ -1,0 +1,166 @@
+.pricing{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/notexture-bg.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6% 15% ;
+    gap: 20px;
+  }
+
+.plans-header{
+    font-size: 35px;
+}
+
+.plans-text{
+    font-size: 20px;
+    font-family: inter;
+}
+
+
+
+.plan-btn-container{
+    width: 65%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: #111A39;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.plan-btn{
+    width: 50%;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    background-color: transparent;
+}
+
+.plan-btn:hover{
+    cursor: pointer;
+}
+
+/* .plan-btn-container .active{
+    color: #222222;
+} */
+
+.inactive{
+    background-color: transparent;
+    color: #fff;
+}
+
+.blank {
+    background-color: #fff;
+    position: absolute;
+    width: 45%;
+    transition: transform 0.3s linear;
+    border-radius: 20px;
+    left: 20px;
+}
+
+.available-plans{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.plan-container{
+    position: relative;
+    width: 30%;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .2s ease-in-out;
+    margin-top: 20px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #83888E, #E0EAF4) border-box;
+}
+
+.plan-container:hover{
+    cursor: pointer;
+    scale: 1.02;
+    transition: all .2s ease-in-out;
+}
+
+.plan-container:nth-child(2){
+    scale: 1.04;
+}
+
+.plan{
+    width: fit-content;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 12px;
+    color: #fff;
+    background-image: linear-gradient(to right, #111A39, #03306B, #0588AC, #000000);
+}
+
+.plan:hover{
+    background-image: linear-gradient(to right, #000000, #0588AC, #03306B, #111A39);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.price{
+    font-size: 24px;
+    font-family: roboto;
+    padding: 5px 0px;
+    border-bottom: solid 1px #99999981;
+}
+
+.price span{
+    font-size: 10px;
+    font-family: inter;
+    color: #222222;
+    font-weight: 400;
+}
+
+.plan-features {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature{
+    display: flex; 
+}
+
+.feature p{
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.get-started-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.get-started-btn button{
+
+    padding: 10px 40px;
+    border-radius: 10px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #111A39, #0588AC, #03306B) border-box;
+    transition: all .2s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.get-started-btn button:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: all .2s ease-in-out;
+}
+

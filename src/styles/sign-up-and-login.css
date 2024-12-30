@@ -1,0 +1,147 @@
+.sign-up-page, .login-page{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 60%;
+    font-family: inter;
+}
+
+.switch-tab{
+    display: flex;
+    justify-content: space-around;
+}
+
+.switch-tab a{
+    text-decoration: none;
+}
+
+.switch-tab p{
+    font-size: 16px;
+    font-family: inter;
+    font-weight: 600;
+    color: #999999;
+    padding: 3px;
+}
+
+.switch-tab .sign-up-tab{
+    color: #000000;
+}
+
+.switch-tab .sign-up-tab::before{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 25px;
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+.switch-tab .login-tab{
+    color: #000000;
+}
+
+.switch-tab .login-tab::before{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+}
+.sign-up-form{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.google-btn{
+    padding: 15px;
+    border: 1px solid #888888;
+    background-color: transparent;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 345px;
+}
+
+.sign-up-form p{
+    font-size: 16px;
+}
+
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+
+.details input{
+    width: 345px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid #888888;
+    background-color: transparent;
+    font-size: 10px;
+}
+
+label{
+    font-size: 12px;
+}
+
+label span{
+    color: red;
+}
+
+.terms-and-conditions{
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+}
+
+.terms-and-conditions label{
+    font-size: 10px;
+}
+
+form button{
+    width: 345px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.sign-up-form .redirect{
+    font-size: 10px;
+}
+
+.redirect a{
+    color: #1E7205;
+    text-decoration: none;
+}
