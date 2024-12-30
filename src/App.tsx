@@ -6,7 +6,7 @@ export default function App(){
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const minimumLoadingTime = 2000; // 2 seconds
+        const minimumLoadingTime = 2000; 
         const startTime = Date.now();
 
         const handleLoad = () => {
