@@ -651,7 +651,7 @@ footer p{
   gap: 20px;
 }
 
-.about-footer ul, .resource-footer ul, .company-footer ul, .ls-footer ul{
+.footer-details ul{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1266,7 +1266,7 @@ footer p{
     font-size: 12px
   }
 
-  .about-footer ul, .resource-footer ul, .company-footer ul, .ls-footer ul{
+  .footer-details ul{
     gap: 5px;
   }
 }
@@ -1333,10 +1333,13 @@ footer p{
     justify-content: space-between;
   }
 
+  .top .address{
+    gap: 10px;
+  }
+
   .footer-details{
     display: grid;
     grid-template-columns: auto auto;
-    gap: 20px;
   }
 
   .footer-section h4{
