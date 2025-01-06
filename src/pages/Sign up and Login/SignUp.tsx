@@ -1,4 +1,3 @@
-import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
 
@@ -13,7 +12,7 @@ export default function SignUp(){
                 </div>
                 <div className="sign-up-form">
                     <button className="google-btn">
-                            Continue with google<FcGoogle size={20}/>
+                            Continue with google<FcGoogle size={15}/>
                     </button>
 
                     <p>Or Create Your Account</p>
@@ -36,7 +35,7 @@ export default function SignUp(){
                         
 
                         <div className="terms-and-conditions">
-                            <input type="checkbox" name="terms-and-condition"/>
+                            <input type="checkbox" name="terms-and-condition" title="Agree to terms and conditions"/>
                             <label htmlFor="">By signing up, you agree to our Terms & Conditions and Privacy Policy.</label>
                         </div>
 

@@ -1,20 +1,14 @@
-import React from "react";
-import Navbar from "../../components/Navbar";
 import Hero from "./Hero";
 import WhyAlignAI from "./WhyAlignAI";
 import Stage from "./Stage";
 import Reviews from "./Reviews";
 import Footer from "../../components/Footer";
+import LandingPage from "./LandingPage";
 
 export default function Home(){
     return(
         <div className="home">
-            <img src="images/left-intersect.png" alt="" className="left-intersect" />
-            <img src="images/right-intersect.png" alt="" className="right-intersect" />
-            <img src="images/eclipses.png" alt="eclipse" className="l-eclipse" />
-            <img src="images/r-eclipses.png" alt="eclipse" className="r-eclipse" />
-
-            <Hero/>
+            <LandingPage/>
             
             <div className="trusted">
                 <p>Trusted by the biggest companies</p>

@@ -133,21 +133,23 @@ export default function Footer(){
 
                 </div>
 
-                <div className="about-footer">
-                    {renderSection("About", about)}
-                </div>
-
-                <div className="resource-footer">
-                    {renderSection("Resources", resources)}
-                </div>
-
-                <div className="company-footer">
-                    {renderSection("Company", company)}
-                </div>
-
-                <div className="ls-footer">
-                    {renderSection("Legal", ls)}
-                </div>
+               <div className="footer-details">
+                    <div className="about-footer">
+                         {renderSection("About", about)}
+                     </div>
+            
+                     <div className="resource-footer">
+                         {renderSection("Resources", resources)}
+                     </div>
+            
+                     <div className="company-footer">
+                         {renderSection("Company", company)}
+                     </div>
+            
+                     <div className="ls-footer">
+                         {renderSection("Legal", ls)}
+                     </div>
+               </div>
             </div>
             <div className="bottom">
                 <p>Copyright 2024. All rights reserved.</p>

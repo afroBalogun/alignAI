@@ -1,9 +1,10 @@
 .pricing{
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-image: url("images/notexture-bg.jpg");
     background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,13 +144,13 @@
     font-size: 10px;
 }
 
-.get-started-btn{
+.get-started{
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.get-started-btn button{
+.get-started button{
 
     padding: 10px 40px;
     border-radius: 10px;
@@ -158,9 +159,180 @@
     border: 1px solid transparent;
 }
 
-.get-started-btn button:hover{
+.get-started button:hover{
     cursor: pointer;
     scale: 1.1;
     transition: all .2s ease-in-out;
 }
 
+@media (max-width: 1024px) {
+    .pricing{
+        padding: 10% !important;
+    }
+
+    .plans-header{
+        font-size: 30px;
+    }
+
+    .plans-text{
+        font-size: 16px;
+    }
+
+    .plan-btn-container{
+        width: 80%;
+    }
+
+    .plan-btn{
+        font-size: 12px;
+    }
+
+    .available-plans{
+        flex-direction: column;
+    }
+
+    .plan-container{
+        width: 100%;
+    }
+
+    .plan{
+        font-size: 10px;
+    }
+
+    .price{
+        font-size: 20px;
+    }
+
+    .feature p{
+        font-size: 8px;
+    }
+
+    .get-started-btn button{
+        padding: 10px 20px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .plans-header{
+        font-size: 24px;
+    }
+
+    .plans-text{
+        font-size: 12px;
+    }
+
+    .blank{
+        left: 3%;
+    }
+
+    .plan-container{
+        height: 350px;
+    }
+
+    .price{
+        margin-top: -20px;
+    }
+
+    .plan-features {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing{
+        padding: 80px 0px !important;
+        gap: 10px;
+    }
+
+    .plans-text{
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+
+
+    .price{
+        margin-top: -20px;
+    }
+
+    .plan-features {
+        margin-top: -20px;
+    }
+    
+}
+
+@media (max-width: 437px) {
+
+   .plan-btn-container{
+        width: 350px;
+   }
+
+   .plan-container{
+        height: 300px;
+   }
+
+   .price{
+        margin-top: -50px;
+   }
+
+   .plan-features {
+    margin-top: -60px;
+    gap: 0px;
+}   
+}
+
+@media (min-width: 1750px) {
+    .plan-container{
+        height: 500px;
+    }
+
+
+    .get-started button{
+        padding: 20px 60px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+
+    .get-started button:hover{
+        padding: 20px 70px;
+        font-size: 22px;
+    }
+
+    .plan-btn{
+        font-size: 24px;
+    }
+
+    .plans-header{
+        font-size: 50px;
+    }
+
+    .plans-text{
+        font-size: 30px;
+    }
+
+    .plan{
+        font-size: 20px;
+    }
+
+    .plan-container{
+        height: 600px;
+    }
+
+    .price{
+        font-size: 40px;
+    }
+
+    .feature p{
+        font-size: 20px;
+    }
+
+    .blank{
+        left: 2.6%;
+    }
+
+    .plan-btn-container{
+        width: 80%;
+    }
+
+
+
+}

@@ -103,6 +103,10 @@
     transition: all ease .2s;
 }
 
+.checkbox label{
+    font-size: 10px;
+}
+
 .checkbox label span{
     font-weight: 600;
     color: #000000;
@@ -120,4 +124,145 @@
 .demo-submit-btn:hover{
     cursor: pointer;
     transition: all ease .2s;
+}
+
+@media (max-width: 1173px){
+    .demo-container{
+        margin-top: 40px;
+        gap: 20px;
+        /* flex-direction: column;
+        align-items: start; */
+    }
+
+    .demo-container h3{
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .demo-container p{
+        font-size: 12px;
+        width: 400px;
+    }
+
+    .demo-container ul li{
+        font-size: 14px;
+    }
+
+    .demo-form{
+        width: 380px;
+        height: 380px;
+    }
+
+    .checkbox label{
+        font-size: 9px;
+    }
+
+    .demo-submit-btn{
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width: 920px){
+
+    .demo-form{
+        width: 300px;
+        height: 350px;
+        padding: 30px;
+    }
+
+    .demo-form h4{
+        font-size: 14px;
+    }
+
+    .email{
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+    .demo-submit-btn{
+        width: 100%;
+        padding: 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 840px){
+    .demo-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .demo-content{
+        width: 100%;
+    }
+
+    .demo-content h3{
+        width: auto;
+    }
+
+    .demo-content p{
+        width: auto;
+    }
+}
+
+@media (max-width: 500px){
+    .demo-content h3{
+        font-size: 24px;
+    }
+
+    .demo-content p{
+        font-size: 10px;
+        width: 80%;
+    }
+
+    .demo-content ul li{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1750px) {
+
+
+    .demo-container{
+        margin-top: 0px;
+    }
+
+    .demo-container h3{
+        font-size: 50px;
+        width: 800px;
+
+    }
+
+    .demo-container p{
+        font-size: 20px;
+    }
+
+    .demo-container ul li{
+        font-size: 24px;
+    }
+
+    .demo-form{
+        width: 500px;
+        height: 500px;
+    }
+
+    .demo-form h4{
+        font-size: 24px;
+    }
+
+    .email{
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+
+    .checkbox label{
+        font-size: 12px;
+    }
+
+    .demo-submit-btn{
+        padding: 20px 60px;
+        font-size: 16px;
+    }
 }

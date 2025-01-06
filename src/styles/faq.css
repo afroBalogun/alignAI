@@ -1,7 +1,7 @@
 .faq{
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("images/notexture-bg.jpg");
     background-size: cover;
     display: flex;
@@ -83,7 +83,7 @@
     align-items: center;
 }
 
-.question h2{
+.question{
     font-weight: 600;
     font-family: inter;
     font-size: 20px;
@@ -104,4 +104,180 @@
 .answer{
     font-size: 15px;
     font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .faq{
+        padding: 80px 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-header h2{
+        font-size: 32px;
+    }
+
+    .faq-header p{
+        font-size: 14px;
+    }
+
+    .category{
+        padding: 10px 15px;
+    }
+
+    .QA{
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .question{
+        font-size: 18px;
+    }
+
+    .arrow{
+        transform: scale(0.8);
+    }
+
+    .answer{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px){
+    .faq{
+        padding: 80px 7%;
+    }
+
+    .faq-header h2{
+        font-size: 28px;
+    }
+
+    .faq-header p{
+        font-size: 12px;
+    }
+
+    .category{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .QA{
+        padding: 10px;
+    }
+
+    .question{
+        font-size: 14px;
+    }
+
+    .arrow{
+        transform: scale(0.7);
+    }
+
+
+    .answer{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px){
+    .faq-header h2{
+        font-size: 24px;
+    }
+
+    .faq-header p{
+        font-size: 10px;
+    }   
+
+    .category{
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .QA{
+        padding: 10px;
+        gap: 0px;
+    }
+
+    .question {
+        font-size: 12px !important;
+    }
+
+    .arrow{
+        transform: scale(0.6);
+    }
+
+    .answer{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 425px){
+    .faq-header h2{
+        font-size: 20px;
+    }
+
+    .faq-header p{
+        font-size: 8px;
+    }
+
+    .category{
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+
+    .QA{
+        padding: 10px;
+    }
+
+    .question{
+        font-size: 10px !important;
+    }
+
+    .arrow{
+        transform: scale(0.4);
+    }
+
+
+    .answer{
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 1750px) {
+    .faq{
+        padding: 7% 20% ;
+    }
+
+    .faq-header h2{
+        font-size: 40px;
+    }
+
+    .faq-header p{
+        font-size: 18px;
+    }
+
+    .category{
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .QA{
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .question{
+        font-size: 24px;
+    }
+
+    .arrow{
+        transform: scale(1);
+    }
+
+    .answer{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+
 }

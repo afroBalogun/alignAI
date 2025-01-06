@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
+import { IoIosMenu } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+
+
 
 export default function Navbar(){
+    const [menu, setMenu] = React.useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const handleMenu = () => {
+        setMenu(!menu);
+    }
+
+    const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const navItems = [
         {
             navElement: "Home",
@@ -23,39 +45,50 @@ export default function Navbar(){
 
     const navMenu = navItems.map((navItem) => {
         return(
-            <li>
-                <NavLink to={navItem.link}
+            
+            <NavLink to={navItem.link} onClick={handleMenu} key={navItem.navElement}
                 >
-                    {navItem.navElement}    
+                <li>
+                    {navItem.navElement} 
+                </li>
+   
                 </NavLink>
-            </li>
         )
     })
 
     return(
         <nav >
-            <div className="navbar">
-                <a className="logo" href="#">
+            <div className="navbar" style={menu ? { overflow: "visible" } : {}}>
+                <a className="logo" href="/">
                     <img src="images/alignAI-icon.png" alt="Logo"/>
                     <h3>Align<span>AI</span></h3>
                 </a>
 
-                <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About Us</NavLink></li>
-                    <li><NavLink to="/pricing">Pricing</NavLink></li>
-                    <li><NavLink to="/faq">FAQ</NavLink></li>
-                </ul>
+                <div className={`menu-wrapper ${menu ? "active-menu" : ""}`}>
+                    <ul >
+                        {navMenu}
+                    </ul>
 
-                <div className="sl-btn">
-                    <Link to="/sign-up">
-                        <button className="sign-up">Sign up</button>
-                    </Link>
-                    <Link to="/login">
-                        <button className="login">Login</button>
-                    </Link>
+                    <div className="sl-btn" >
+                        <Link to="/sign-up">
+                            <button className="sign-up">Sign up</button>
+                        </Link>
+                        <Link to="/login">
+                            <button className="login">Login</button>
+                        </Link>
+                    </div>
                 </div>
+        
+               
+
+               {isMobile ? (
+                    menu ? <IoClose onClick={handleMenu} style={{zIndex : 3, cursor: "pointer"}}/> : <IoIosMenu onClick={handleMenu} style={{zIndex : 3, cursor: "pointer"}}/>
+               ) : null}
+
+
             </div>
+
+            
             
         </nav>
     )

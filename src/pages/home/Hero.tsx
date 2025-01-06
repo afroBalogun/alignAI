@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 
 export default function Hero(){
@@ -35,7 +34,11 @@ export default function Hero(){
             <h2>Streamlined Solutions for Your RevOps Workflow</h2>
             <p className="motto">Connect, analyze, and synchronize your business data effortlessly — all within one centralized platform.</p>
             
-            <Link to="/book-a-demo"><button className="demo-btn">Book a demo</button></Link>
+            <div className="hero-btn-container">
+                <Link to="/sign-up"><button className="get-started-btn">Get Started</button></Link>
+
+                <Link to="/book-a-demo"><button className="demo-btn">Book a demo</button></Link>
+            </div>
             
 
             <div className="contact-bg">

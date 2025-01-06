@@ -81,7 +81,16 @@
     font-size: 12px;
     font-weight: 600;
     width: 345px;
+    transition: .2s ease all;
 }
+
+.google-btn:hover{
+    cursor: pointer;
+    transition: .2s ease all;
+    font-size: 13px;
+}   
+
+
 
 .sign-up-form p{
     font-size: 16px;
@@ -91,21 +100,24 @@ form{
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
 .details{
     display: flex;
     flex-direction: column;
+    width: 345px;
 }
 
 .details input{
-    width: 345px;
+    width: 100%;
     padding: 15px 20px;
     border-radius: 20px;
     border: 1px solid #888888;
     background-color: transparent;
     font-size: 10px;
+    outline: none;
 }
 
 label{
@@ -120,10 +132,32 @@ label span{
     display: flex;
     gap: 5px;
     font-weight: 600;
+    transition: all .2s ease;
+}
+
+.terms-and-conditions input:hover{
+    cursor: pointer;
+    transition: all .2s ease;
 }
 
 .terms-and-conditions label{
     font-size: 10px;
+}
+
+form .forget{
+    position: relative;
+    font-size: 10px;
+    left: 38%;
+    top: -10px;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+
+.forget{
+    cursor: pointer;
+    transition: .2s all ease;
+    width: fit-content;
+    color: #1E7205;
 }
 
 form button{
@@ -135,6 +169,15 @@ form button{
     background-color: #000000;
     border-radius: 20px;
     color: #fff;
+    transition: .2s ease all;
+    border: 1px solid;
+}
+
+form button:hover{
+    cursor: pointer;
+    transition: .2s ease all;
+    background-color: #fff;
+    color: #000000;
 }
 
 .sign-up-form .redirect{
@@ -144,4 +187,188 @@ form button{
 .redirect a{
     color: #1E7205;
     text-decoration: none;
+}
+
+@media (max-width:1024px) {
+    .content{
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+
+    .switch-tab p{
+        font-size: 14px;
+    }
+
+    .switch-tab .sign-up-tab::before{
+        margin-top: 18px;
+        width: 10px;
+        height: 2px;
+    }
+
+    .switch-tab .login-tab::before{
+        margin-top: 18px;
+        width: 10px;
+        height: 2px;
+    }
+
+    .content{
+        width: 90%;
+    }
+
+    .sign-up-form p{
+        font-size: 14px;
+    }
+
+    .sign-up-form .forget{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:600px) {
+    .google-btn{
+        width: 300px;
+    }
+
+    .details{
+        width: 300px;
+    }
+
+    .terms-and-conditions{
+        width: 300px;
+    }
+    
+    form button{
+        width: 300px;
+    }
+}
+
+@media (max-width:425px) {
+
+    .sign-up-page, .login-page{
+        margin-top: 10px;
+    }
+
+    .switch-tab p{
+        font-size: 12px;
+    }
+
+    .switch-tab .sign-up-tab::before{
+        margin-top: 16px;
+        width: 8px;
+        height: 2px;
+    }
+
+    .switch-tab .login-tab::before{
+        margin-top: 16px;
+        width: 8px;
+        height: 2px;
+    }
+
+    .content{
+        width: 100%;
+    }
+    
+    .sign-up-form p{
+        font-size: 12px;
+    }
+
+    .google-btn{
+        width: 280px;
+        font-size: 10px;
+    }
+
+    .details{
+        width: 280px;
+    }
+
+    .terms-and-conditions{
+        width: 280px;
+    }
+
+    .terms-and-conditions label{
+        font-size: 9px;
+    }
+
+    form button{
+        width: 280px;
+    }
+}
+
+@media (max-width: 350px) {
+    .google-btn{
+        width: 220px;
+    }
+
+    .sign-up-form p{
+        font-size: 10px;
+    }
+
+    .details{
+        width: 220px;
+    }
+
+    .details input{
+        font-size: 9px;
+    }
+
+    .terms-and-conditions{
+        width: 220px;
+    }
+
+    .terms-and-conditions label{
+        font-size: 8px;
+    }
+
+    form button{
+        width: 220px;
+    }
+}
+
+@media (min-width: 1750px) {
+    .google-btn{
+        width: 400px;
+    }
+
+    .sign-up-form {
+        gap: 30px;
+        padding: 60px;
+    }
+
+    .sign-up-form p{
+        font-size: 20px;
+    }
+
+    .details{
+        width: 400px;
+    }
+
+    .details label{
+        font-size: 16px;
+    }
+
+    .details input{
+        font-size: 16px;
+    }
+
+    .terms-and-conditions{
+        width: 400px;
+    }
+
+    .terms-and-conditions label{
+        font-size: 12px;
+    }
+
+    form button{
+        width: 400px;
+    }
+
+    .sign-up-form .redirect{
+        font-size: 12px;
+    }
+
+    form .forget{
+        font-size: 12px;
+    }
 }

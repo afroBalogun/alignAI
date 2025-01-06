@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { questions } from "../../assets/questions";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 

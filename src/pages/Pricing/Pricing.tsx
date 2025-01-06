@@ -76,7 +76,7 @@ export default function Pricing() {
                 ))}
             </div>
 
-            <div className="get-started-btn">
+            <div className="get-started">
                 <button>Get stated</button>
             </div>  
         </div>

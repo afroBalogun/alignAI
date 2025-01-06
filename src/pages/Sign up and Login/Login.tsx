@@ -12,7 +12,7 @@ export default function Login(){
                 </div>
                 <div className="sign-up-form">
                     <button className="google-btn">
-                            Continue with google<FcGoogle />
+                            Continue with google<FcGoogle size={15}/>
                     </button>
 
                     <p>Or</p>
@@ -28,7 +28,7 @@ export default function Login(){
                             <input type="text" name="email" placeholder="Enter your password here"/>
                         </div>
                         
-                        <p>Forget password?</p>
+                        <p className="forget">Forget password?</p>
 
                         <button>Login</button>
                     </form>

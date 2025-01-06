@@ -22,14 +22,28 @@
   animation: bounce 1s infinite;
 }
 
+.app{
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .home{
-    background-image: url("images/AI-home.jpg");
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    padding-top: 20px;
-    overflow-x: hidden;
-  
+  width: 100%;
+  overflow-x: hidden;
+  transition: all .2s ease;
+}
+
+
+.landing-page{
+  position: relative;
+  background-image: url("images/AI-home.jpg");
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  padding-top: 20px;
+  background-position: center;
+  /* display: grid;
+  grid-template-rows: auto 1fr auto; */
   }
 
 .left-intersect{
@@ -48,7 +62,6 @@
 .l-eclipse{
   position: absolute;
   top: 40%;
-  transform: rotate(180deg)
 }
 
 .r-eclipse{
@@ -88,18 +101,45 @@ nav{
   font-family: "Hammersmith One";
 }
 
- span{
-  color: #1E7205;
+.navbar .logo{
+  position: relative;
+  z-index: 3;
 }
 
-.navbar ul{
-  list-style: none;
+.menu-wrapper{
+  width: 65%;
   display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-wrapper ul{
+  position: relative;
+  list-style: none;
+  display: flex !important;
   font-size: 15px;
   font-weight: 500;
 }
 
-.navbar ul li a{
+
+.menu-icon{
+  position: relative;
+  float: right;
+}
+
+ span{
+  color: #1E7205;
+}
+
+/* .navbar ul{
+  list-style: none;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+} */
+
+.navbar ul a{
   text-decoration: none;
   margin: 0px 30px;
   color: #000000;
@@ -154,7 +194,8 @@ nav{
 
 .hero h2{
   font-size: 36px;
-  width: 490px;
+  width: 80%;
+  max-width: 490px;
   text-align: center;
   font-weight: 500;
 }
@@ -164,6 +205,32 @@ nav{
   font-weight: 500;
 }
 
+
+
+.hero-btn-container a{
+  text-decoration: none;
+}
+
+.get-started-btn{
+  display: none !important;
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background-image: transparent;
+  color: #000000;
+  font-size: 14px;
+  border: none;
+  font-weight: 500;
+  border: 1px solid #000000;
+}
+
+.get-started-btn:hover{
+  background-image: linear-gradient(to right, #111A39, #000000);
+  color: #fff;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
 .demo-btn{
   position: relative;
   padding: 8px 14px;
@@ -171,7 +238,7 @@ nav{
   background-image: linear-gradient(to right, #111A39, #000000);
   color: #fff;
   font-size: 14px;
-  border: none;
+  border: 1px solid #000000;
   font-weight: 500;
 }
 
@@ -472,11 +539,16 @@ nav{
   width: 60%;
   position: relative;
   margin-top: 20px;
-  overflow-x: auto;
 }
 
 .review-container:hover{
   cursor: grab;
+}
+
+.review-slider{
+  display: none;
+  width: 65%;
+  padding: 20px;
 }
 
 .swiper {
@@ -541,6 +613,7 @@ footer{
   position: relative;
   padding: 20px 100px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
   background-color: #fff;
@@ -569,6 +642,16 @@ footer p{
   color: #555555;
 }
 
+.office p{
+  width: 270px;
+}
+
+.footer-details{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .about-footer ul, .resource-footer ul, .company-footer ul, .ls-footer ul{
   position: relative;
   display: flex;
@@ -591,6 +674,7 @@ footer p{
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: end;
   font-size: 13px;
 }
 
@@ -599,3 +683,907 @@ footer p{
   gap: 20px;
 }
 
+@media (max-width: 1024px) {
+  .l-eclipse, .r-eclipse{
+    transform: scale(.6);
+  }
+
+  .l-eclipse{
+    left: -60px;
+  }
+
+  .r-eclipse{
+    right: -60px;
+  }
+
+  .navbar ul{
+    font-size: 12px;
+  }
+
+  .navbar ul a{
+    margin: 0px 20px;
+  }
+
+  .hero{
+    gap: 10px;
+  }
+  .hero h2{
+    font-size: 30px;
+    width: 400px;
+  }
+
+  .hero .motto{
+    font-size: 16px;
+    width: 480px;
+    text-align: center;
+  }
+
+  .contact-bg{
+    margin-top: -10px;
+    transform: scale(.8);
+  }
+
+  .in-container{
+    margin-top: -10px;
+    transform: scale(.8);
+  }
+
+  .reasons-container{
+    flex-wrap: wrap;
+
+  }
+
+  .reason-to-choose img{
+    width: 100px;
+  }
+
+  .reason-to-choose .img-container::before {
+    width: 100px;
+    height: 100px;
+  }
+
+  .reason-to-choose h3{
+    font-size: 24px;
+  }
+
+  .reason-to-choose p{
+    font-size: 14px;
+    width: 300px;
+  }
+
+
+  .stages{
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .reasons-container{
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-intersect{
+    transform: scale(.6);
+    top: -80px;
+    left: -20px;
+  }
+
+  .right-intersect{
+    transform: scale(.6);
+    right: -40px;
+  }
+
+  .l-eclipse, .r-eclipse{
+    transform: scale(.4);
+  }
+
+  .navbar{
+    border: none;
+    background: none;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .logo{
+    font-size: 10px;
+  }
+
+  .menu-wrapper{
+    position: absolute;
+    left: -5%;
+    top: -38%;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #fff;
+    padding: 80px 40px;
+    transform: translateX(100%);
+    transition: .5s ease;
+    filter: opacity(0);
+  }
+
+  .active-menu{
+    transform: translateX(0%);
+    transition: .5s ease;
+    filter: opacity(1);
+  }
+
+  .menu-wrapper ul{
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-wrapper ul li{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .menu-wrapper ul li:hover{
+    background-color: #dcdcdc;
+    transition: .2s ease;
+    cursor: pointer;
+    scale: 1.02;
+  }
+
+  .menu-wrapper ul a{
+    width: 100%;
+    margin: 0px;
+    font-size: 12px;
+  }
+
+  .sl-btn{
+    display: none;
+  }
+
+  .menu-wrapper .sl-btn{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu-wrapper .sl-btn .sign-up{
+    background-color: #fff;
+  }
+
+  .menu-wrapper .sl-btn .sign-up:hover{
+    background-color: #dcdcdc;
+    transition: .2s ease;
+  }
+
+  .menu-wrapper .sl-btn .login{
+    background-color: #1E7205;
+    color: #fff;
+    border: #1E7205;
+  }
+
+  .menu-wrapper .sl-btn button{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .trusted{
+    gap: 10px;
+  }
+
+  .trusted-companies{
+    font-size: 20px;
+  }
+
+  .review-text{
+    font-size: 16px;
+  }
+
+.swiper{
+  display: none !important;
+}
+
+  .review-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .review{
+    font-size: 14px;
+  }
+
+  
+
+  footer{
+    padding: 20px 50px;
+  }
+
+  .address, .footer-section{
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .office p{
+    width: 200px;
+  }
+
+  .bottom{
+    font-size: 10px;
+  }
+
+  .socials{
+    gap: 10px;
+  }
+
+  .socials img{
+    transform: scale(.8);
+  }
+}
+
+@media (max-width: 650px) {
+
+  .right-intersect, .left-intersect, .l-eclipse, .r-eclipse{
+    display: none;
+  }
+
+  .home{
+    background-color: #F5F5F5;
+    background-image: url("images/mobile-bg.png") !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-btn-container{
+    display: flex;
+    gap: 20px;
+  }
+
+  .get-started-btn{
+    display: block !important;
+  }
+
+  .hero h2{
+    font-size: 24px;
+    width: 300px;
+  }
+
+  .hero .motto{
+    font-size: 14px;
+    width: 380px;
+  }
+
+
+
+  .trusted{
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .trusted img{
+    transform: scale(.8);
+  }
+
+  .why-align h3{
+    font-size: 24px;
+  }
+
+  .reason-to-choose img{
+    width: 80px;
+  }
+
+  .reason-to-choose .img-container::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  .reason-to-choose h3{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .reason-to-choose p{
+    font-size: 12px;
+    width: 300px;
+  }
+
+  .stages-container h2{
+    font-size: 24px;
+  }
+
+  .stages-container p{
+    font-size: 16px;
+  }
+
+  .stage{
+    width: 280px;
+    height: 280px;
+  }
+
+  .stage h2{
+    font-size: 20px;
+  }
+
+  .stage p{
+    font-size: 12px;
+  }
+
+  .reviews{
+    padding: 20px;
+  }
+
+  .review-title{
+    font-size: 24px;
+  }
+
+  .review-text{
+    font-size: 16px;
+  }
+
+  .review-container{
+    width: 80%;
+  }
+
+  .review-card{
+    height: 200px;
+    gap: 15px;
+  }
+
+  .rating{
+    margin-top: 10px;
+  }
+
+  .review{
+    font-size: 12px;
+  }
+
+  .who-reviewed img{
+    width: 30px;
+  }
+
+  .who-reviewed{
+    gap: 5px;
+  }
+
+  .reviewer-details h4{
+    font-size: 16px;
+  }
+
+  .reviewer-details p{
+    font-size: 10px;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+
+  .review-text{
+    font-size: 14px;
+    width: 350px;
+    text-align: center;
+  }
+
+  .rating{
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .review{
+    font-size: 12px;
+  }
+
+  .who-reviewed img{
+    width: 30px;
+  }
+
+  .who-reviewed{
+    gap: 5px;
+  }
+
+  .reviewer-details h4{
+    font-size: 14px;
+  }
+
+  .reviewer-details p{
+    font-size: 10px;
+  }
+
+  footer{
+    padding: 20px 20px;
+  }
+
+  .address .logo{
+    font-size: 14px;
+  }
+
+  .address .logo img{
+    width: 20px;
+  }
+
+  .footer-section h4{
+    font-size: 14px;
+  }
+
+  .address, .footer-section{
+    gap: 5px;
+    font-size: 8px;
+  }
+
+  .office p{
+    width: 150px;
+  }
+
+  .bottom{
+    font-size: 8px;
+  }
+
+  .socials{
+    gap: 10px;
+  }
+
+  .socials img{
+    transform: scale(.6);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .hero .motto{
+    font-size: 12px;
+    width: 300px;
+  }
+
+  .contact-bg{
+    margin-top: -20px;
+    transform: scale(.7);
+  }
+
+  .demo-btn, .get-started-btn{
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .in-container{
+    margin-top: -20px;
+    transform: scale(.7);
+  }
+
+  .trusted{
+    font-size: 10px;
+  }
+
+  .trusted img{
+    transform: scale(.5);
+  }
+
+  .why-align h3{
+    font-size: 20px;
+  }
+
+  .reason-to-choose img{
+    width: 60px;
+  }
+
+  .reason-to-choose .img-container::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .reason-to-choose h3{
+    font-size: 16px;
+  }
+
+  .reason-to-choose p{
+    font-size: 10px;
+    width: 250px;
+  }
+
+  .stages-container h2{
+    font-size: 20px;
+  }
+
+  .stages-container p{
+    font-size: 14px;
+  }
+
+  .stage{
+    width: 250px;
+    height: 250px;
+  }
+
+  .stage h2{
+    font-size: 18px;
+  }
+
+  .stage p{
+    font-size: 10px;
+  }
+
+  .reviews{
+    padding: 20px;
+  }
+
+  .review-title{
+    font-size: 20px;
+  }
+
+  .review-text{
+    font-size: 12px;
+  }
+
+  .review-container{
+    width: 90%;
+  }
+
+  .review-card{
+    height: 180px;
+    gap: 15px;
+    min-width: 250px;
+  }
+
+  .rating{
+    margin-top: 10px;
+  }
+
+  .review{
+    font-size: 10px;
+  }
+
+  .who-reviewed img{
+    width: 25px;
+  }
+
+  .who-reviewed{
+    gap: 5px;
+  }
+
+  .reviewer-details h4{
+    font-size: 10px;
+  }
+
+  .reviewer-details p{
+    font-size: 8px;
+  }
+
+  footer{
+    padding: 20px 10px;
+  }
+
+  .address .logo{
+    font-size: 12px;
+  }
+
+  .address .logo img{
+    width: 20px;
+  }
+
+  .footer-section h4{
+    font-size: 12px
+  }
+
+  .about-footer ul, .resource-footer ul, .company-footer ul, .ls-footer ul{
+    gap: 5px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .hero h2{
+    font-size: 20px;
+    width: 250px;
+  }
+
+  .hero .motto{
+    font-size: 10px;
+    width: 250px;
+  }
+
+  .stages-container{
+    gap: 5px;
+  }
+
+  .stages-container h2{
+    font-size: 18px;
+  }
+
+  .stages-container p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .stages{
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .stage h2{
+    font-size: 16px;
+  }
+
+  .stage p{
+    font-size: 11px;
+    padding: 10px 20px;
+    line-height: 15px;
+  }
+
+  .stage p{
+    text-align: left;
+  }
+
+  .reviews{
+    gap: 5px;
+  }
+
+  .review-text{
+    font-size: 10px;
+    width: 250px;
+  }
+
+  footer{
+    padding: 20px;
+  }
+
+  .top{
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-details{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+
+  .footer-section h4{
+    font-size: 10px
+  } 
+
+  .address .logo{
+    font-size: 15px;
+  }
+
+  .footer-section a{
+    font-size: 7px;
+  }
+
+  .office p{
+    width: 130px;
+    font-size: 7px;
+  }
+
+  .bottom{
+    font-size: 7px;
+  }
+
+  .socials img{
+    transform: scale(.5);
+  }
+}
+
+@media (min-width: 1750px) {
+
+  .navbar{
+    width: 90%;
+  }
+
+  .logo{
+    font-size: 20px;
+  }
+
+
+  .menu-wrapper{
+    width: 60%;
+  }
+
+  .menu-wrapper ul{
+    font-size: 18px;
+  }
+
+  .menu-wrapper ul a{
+    margin: 0px 30px;
+  }
+
+  .menu-wrapper .sl-btn button{
+    padding: 20px;
+  }
+
+  .menu-wrapper .sl-btn{
+    gap: 20px;
+  }
+
+  .menu-wrapper .sl-btn button{
+    padding: 8px 14px;
+    font-size: 18px;
+  }
+  
+
+  .hero{
+    gap: 20px;
+  }
+
+
+
+
+  .hero h2{
+    font-size: 48px;
+    min-width: 800px;
+    margin-top: 20px;
+  }
+
+  .hero .motto{
+    font-size: 24px;
+    min-width: 800px;
+    margin-bottom: 20px;
+  }
+
+  .demo-btn, .get-started-btn{
+    padding: 16px 28px;
+    font-size: 24px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-bg{
+    margin-top: 20px;
+    transform: scale(1.2);
+  }
+
+  .in-container{
+    margin-top: 100px;
+    transform: scale(1.2);
+  }
+
+  .trusted{
+    font-size: 30px;
+  }
+
+  .trusted img{
+    transform: scale(1.2);
+  }
+
+  .why-align h3{
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .reason-to-choose img{
+    width: 200px;
+  }
+
+  .reason-to-choose .img-container::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .reason-to-choose h3{
+    font-size: 40px;
+  }
+
+  .reason-to-choose p{
+    font-size: 24px;
+    width: 600px;
+  }
+
+  .stages-container h2{
+    font-size: 48px;
+  }
+
+  .stages-container p{
+    font-size: 30px;
+  }
+
+  .stages{
+    margin-top: 40px;
+    gap: 80px;
+  }
+
+  .stage{
+    width: 650px;
+    height: 650px;
+  }
+
+  .stage h2{
+    font-size: 40px;
+    border-bottom: 2px dashed #fff;
+  }
+
+  .stage p{
+    font-size: 30px;
+    height: 400px;
+  }
+
+  .reviews{
+    padding: 50px 20px;
+  }
+
+  .review-title{
+    font-size: 48px;
+  }
+
+  .review-text{
+    font-size: 30px;
+  }
+
+  .review-container{
+    width: 70%;
+  }
+
+  .review-card{
+    height: 400px;
+    gap: 30px;
+  }
+
+  .rating{
+    margin-top: 40px;
+  }
+
+  .review{
+    font-size: 30px;
+  }
+
+  .who-reviewed img{
+    width: 80px;
+  }
+
+  .who-reviewed{
+    gap: 20px;
+  }
+
+  .reviewer-details h4{
+    font-size: 40px;
+  }
+
+  .reviewer-details p{
+    font-size: 20px;
+  }
+
+  footer{
+    padding: 50px 100px;
+    gap: 60px;
+  }
+
+  .address .logo{
+    font-size: 30px;
+  }
+
+  .address .logo img{
+    width: 50px;
+  }
+
+  .footer-details{
+    gap: 40px;
+  }
+
+  .footer-section h4{
+    font-size: 30px;
+  }
+
+  .footer-section a{
+    font-size: 20px;
+  }
+
+  .office h3{
+    font-size: 30px;
+  }
+
+  .office p{
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .bottom{
+    font-size: 20px;
+  }
+
+  .socials img{
+    transform: scale(1.2);
+  }
+
+
+}

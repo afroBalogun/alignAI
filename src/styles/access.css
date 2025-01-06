@@ -1,8 +1,26 @@
 .access{
     position: relative;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
-    padding: 40px 7%;
+    padding: 40px 60px;
     background: url("images/background.png") #f5f5f5;
     background-size: cover;
+}
+
+@media (max-width: 600px){
+    .access{
+        padding: 40px;
+    }
+}
+
+@media (max-width: 425px){
+    .access{
+        padding: 40px 20px;
+    }
+}
+
+@media (min-width: 1750px) {
+    .access{
+        padding: 4% 20% ;
+    }
 }

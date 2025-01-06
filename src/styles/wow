@@ -1,0 +1,66 @@
+.active-menu{
+    position: absolute;
+    left: -2%;
+    top: -40%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+  }
+
+  .active-menu ul{
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .active-menu ul li{
+    /* background-color: #111A39; */
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .active-menu ul li:hover{
+    background-color: #dcdcdc;
+    transition: .2s ease;
+  }
+
+  .active-menu ul li a{
+    margin: 10px 0;
+    font-size: 12px;
+  }
+
+  .sl-btn{
+    display: none;
+  }
+
+  .active-menu .sl-btn{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .active-menu .sl-btn .sign-up{
+    background-color: #fff;
+  }
+
+  .active-menu .sl-btn .sign-up:hover{
+    background-color: #dcdcdc;
+    transition: .2s ease;
+  }
+
+  .active-menu .sl-btn .login{
+    background-color: #1E7205;
+    color: #fff;
+    border: #1E7205;
+  }
+
+  .active-menu .sl-btn button{
+    width: 100%;
+    padding: 10px;
+  }

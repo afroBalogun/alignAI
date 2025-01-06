@@ -50,6 +50,35 @@ export default function Reviews(){
 
         )
     })
+
+    const review = reviews.map((review) => {
+        const stars = Array.from({ length: review.ratings }, (_, i) => (
+            <FaStar key={i} color="#FFD700" />
+        ))
+
+        return (
+            <div className="review-slide">
+                <div key={review.name} className="review-card">
+                    <div className="rating">
+                        {stars}
+                    </div>
+            
+                    <p className="review">
+                        "{review.review}"
+                    </p>
+            
+                    <div className="who-reviewed">
+                        <img src={`images/${review.profilePic}`} alt={review.name} />
+                        <div className="reviewer-details">
+                            <h4>{review.name}</h4>
+                            <p>—{review.occupation}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+    })
     return(
         <div className="reviews">
             <h1 className="review-title">What are people saying?</h1>
@@ -61,6 +90,10 @@ export default function Reviews(){
             >
                 {reviewCards}
             </Swiper>
+
+            <div className="review-slider">
+                {review}
+            </div>
         </div>
     )
 }
