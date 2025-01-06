@@ -2,9 +2,15 @@
     position: relative;
     width: 100vw;
     min-height: 100vh;
-    padding: 40px 60px;
+    padding: 40px 8%;
     background: url("images/background.png") #f5f5f5;
     background-size: cover;
+}
+
+@media (max-width: 1024px){
+    .access{
+        padding: 40px 60px;
+    }
 }
 
 @media (max-width: 600px){

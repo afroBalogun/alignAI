@@ -123,6 +123,8 @@
 
 .demo-submit-btn:hover{
     cursor: pointer;
+    background-color: #289307;
+    color: #fff;
     transition: all ease .2s;
 }
 
@@ -130,8 +132,6 @@
     .demo-container{
         margin-top: 40px;
         gap: 20px;
-        /* flex-direction: column;
-        align-items: start; */
     }
 
     .demo-container h3{

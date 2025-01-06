@@ -172,7 +172,7 @@ nav{
 
 .sign-up{
   border: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 .login{
@@ -267,7 +267,6 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transform: scale(.8); */
 }
 
 .contact-ui{
