@@ -214,34 +214,19 @@
 }
 
 @media (max-width: 425px){
-    .faq-header h2{
-        font-size: 20px;
-    }
 
-    .faq-header p{
-        font-size: 8px;
-    }
-
-    .category{
-        padding: 4px 6px;
-    }
 
     .QA{
         padding: 10px;
     }
 
-    .question{
-        font-size: 10px !important;
-    }
+
 
     .arrow{
         transform: scale(0.4);
     }
 
 
-    .answer{
-        font-size: 8px;
-    }
 }
 
 @media (min-width: 1750px) {
