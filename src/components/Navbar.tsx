@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";

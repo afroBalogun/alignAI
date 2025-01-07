@@ -1,7 +1,7 @@
-import React from "react";
 import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
 
 export default function Reviews() {
     const reviews = [

@@ -1,4 +1,3 @@
-import Hero from "./Hero";
 import WhyAlignAI from "./WhyAlignAI";
 import Stage from "./Stage";
 import Reviews from "./Reviews";
