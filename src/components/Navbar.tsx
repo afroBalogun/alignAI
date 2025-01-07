@@ -40,7 +40,7 @@ export default function Navbar() {
             <div
                 className="navbar"
                 style={{
-                    backgroundImage: isMobile ? `url("static/images/background.png")` : "none",
+                    backgroundImage: isMobile ? "none" : `url("static/images/background.png")`,
                     overflow: menu ? "visible" : "hidden"
                 }}
             >
