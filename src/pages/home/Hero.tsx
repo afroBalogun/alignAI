@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
 
             {/* Contact UI */}
-            <div className="contact-bg">
+            <div className="contact-bg" >
                 <div className="contact-ui">
                     <div className="search-tab">
                         <i className="fa-solid fa-magnifying-glass"></i>
