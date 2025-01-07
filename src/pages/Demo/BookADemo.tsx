@@ -1,6 +1,6 @@
 export default function BookADemo() {
     return (
-        <div className="book-a-demo">
+        <div className="book-a-demo" style={{backgroundImage: `url("static/images/background.png")`}}>
             <div className="demo-container">
                 <div className="demo-content">
                     <h3>

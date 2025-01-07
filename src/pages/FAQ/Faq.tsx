@@ -20,7 +20,7 @@ export default function Faq() {
     );
 
     return (
-        <div className="faq" id="faq">
+        <div className="faq" id="faq" style={{backgroundImage: `url("static/images/notexture-bg.jpg")`}}>
             <div className="faq-header">
                 <h2>Frequently Asked Questions</h2>
                 <p>

@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="about" id="about">
+        <div className="about" id="about" style={{backgroundImage: `url("static/images/notexture-bg.jpg")`}}>
             <div className="about-text">
                 <h2 className="about-us">About Us</h2>
                 <div className="desc">

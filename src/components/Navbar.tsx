@@ -37,7 +37,7 @@ export default function Navbar() {
 
     return (
         <nav>
-            <div className="navbar" style={menu ? { overflow: "visible" } : {}}>
+            <div className="navbar" style={{ backgroundImage: `url("static/images/AI-home.jpg")`, ...(menu ? { overflow: "visible" } : {}) }}>
                 <a className="logo" href="/">
                     <img src="static/images/alignAI-icon.png" alt="Logo" />
                     <h3>

@@ -83,7 +83,7 @@ export default function Pricing() {
     ));
 
     return (
-        <div className="pricing" id="pricing">
+        <div className="pricing" id="pricing" style={{backgroundImage: `url("static/images/notexture-bg.jpg")`}}>
             <h2 className="plans-header">Choose your Right Plan!</h2>
             <p className="plans-text">Unlock endless possibilities</p>
 
