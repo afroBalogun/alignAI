@@ -82,6 +82,7 @@
     font-weight: 600;
     width: 345px;
     transition: .2s ease all;
+    color: #000000;
 }
 
 .google-btn:hover{

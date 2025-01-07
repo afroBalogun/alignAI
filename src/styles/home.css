@@ -99,6 +99,7 @@ nav{
   gap: 0;
   font-size: 15px;
   font-family: "Hammersmith One";
+  width: fit-content;
 }
 
 .navbar .logo{
@@ -173,6 +174,7 @@ nav{
 .sign-up{
   border: none;
   background-color: transparent;
+  color: #000000;
 }
 
 .login{
@@ -784,7 +786,7 @@ footer p{
 
   .navbar{
     border: none;
-    background: none;
+    background: transparent;
     position: absolute;
     overflow: hidden;
   }
