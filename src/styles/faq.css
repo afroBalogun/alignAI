@@ -197,7 +197,7 @@
 
     .QA{
         padding: 10px;
-        gap: 0px;
+        gap: 10px;
     }
 
     .question {
@@ -214,11 +214,6 @@
 }
 
 @media (max-width: 425px){
-
-
-    .QA{
-        padding: 10px;
-    }
 
 
 

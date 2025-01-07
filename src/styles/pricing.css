@@ -158,6 +158,7 @@
     background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #111A39, #0588AC, #03306B) border-box;
     transition: all .2s ease-in-out;
     border: 1px solid transparent;
+    color: #000000;
 }
 
 .get-started button:hover{
