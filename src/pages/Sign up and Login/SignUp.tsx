@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function SignUp(){
     return(
-        <div className="sign-up-page" style={{backgroundImage: `url("static/images/background.png")`}}>
+        <div className="sign-up-page">
             <div className="content">
                 <div className="switch-tab">
                     <Link to="/login"><p>Login</p></Link>

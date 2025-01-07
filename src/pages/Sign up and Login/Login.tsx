@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export default function Login(){
     return(
-        <div className="login-page" style={{backgroundImage: `url("static/images/background.png")`}}>
+        <div className="login-page" >
             <div className="content">
                 <div className="switch-tab">
                     <p className="login-tab">Login</p>
