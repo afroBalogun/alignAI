@@ -8,6 +8,18 @@ export default function Hero() {
         { contact_name: "Maya Harper", contact_img: "maya.png" },
     ];
 
+    const contactBgStyle = {
+        position: "absolute",
+        content: '""',
+        width: "300px",
+        height: "160px",
+        backgroundImage: "url('static/images/background.png')",
+        backgroundColor: "#fff",
+        borderRadius: "8px",
+        top: "0", // Adjust as necessary
+        left: "0", // Adjust as necessary
+    };
+
     return (
         <div className="hero">
             {/* Hero Section */}
@@ -28,6 +40,7 @@ export default function Hero() {
 
             {/* Contact UI */}
             <div className="contact-bg" >
+                <div style={contactBgStyle}></div>
                 <div className="contact-ui">
                     <div className="search-tab">
                         <i className="fa-solid fa-magnifying-glass"></i>
