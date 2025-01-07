@@ -31,7 +31,7 @@ export default function Reviews() {
             <div className="rating">{renderStars(review.ratings)}</div>
             <p className="review">"{review.review}"</p>
             <div className="who-reviewed">
-                <img src={`images/${review.profilePic}`} alt={review.name} />
+                <img src={`static/images/${review.profilePic}`} alt={review.name} />
                 <div className="reviewer-details">
                     <h4>{review.name}</h4>
                     <p>—{review.occupation}</p>

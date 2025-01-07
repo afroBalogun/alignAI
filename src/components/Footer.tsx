@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="top">
                 <div className="address">
                     <div className="logo">
-                        <img src="images/alignAI-icon.png" alt="Logo" />
+                        <img src="static/images/alignAI-icon.png" alt="Logo" />
                         <h3>
                             Align<span>AI</span>
                         </h3>
@@ -89,11 +89,11 @@ export default function Footer() {
             <div className="bottom">
                 <p>Copyright 2024. All rights reserved.</p>
                 <div className="socials">
-                    <img src="images/youtube.png" alt="Youtube" />
-                    <img src="images/LinkedIn.png" alt="LinkedIn" />
-                    <img src="images/X.png" alt="X" />
-                    <img src="images/facebook.png" alt="Facebook" />
-                    <img src="images/instagram.png" alt="Instagram" />
+                    <img src="static/images/youtube.png" alt="Youtube" />
+                    <img src="static/images/LinkedIn.png" alt="LinkedIn" />
+                    <img src="static/images/X.png" alt="X" />
+                    <img src="static/images/facebook.png" alt="Facebook" />
+                    <img src="static/images/instagram.png" alt="Instagram" />
                 </div>
             </div>
         </footer>

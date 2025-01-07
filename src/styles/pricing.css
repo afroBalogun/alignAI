@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url("images/notexture-bg.jpg");
+    background-image: url("static/images/notexture-bg.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

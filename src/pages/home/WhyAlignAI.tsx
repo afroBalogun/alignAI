@@ -26,7 +26,7 @@ export default function WhyAlignAI(){
         return (
             <div key={reason.title} className="reason-to-choose">
                 <div className="img-container">
-                    <img src={`images/${reason.icon}`} alt={reason.title} />
+                    <img src={`static/images/${reason.icon}`} alt={reason.title} />
                 </div>
                 <div className="reason-text">
                     <h3>{reason.title}</h3>

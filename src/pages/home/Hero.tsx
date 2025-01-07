@@ -39,7 +39,7 @@ export default function Hero() {
                             <div key={contact.contact_name} className="contact">
                                 <div className="contact-name">{contact.contact_name}</div>
                                 <img
-                                    src={`images/${contact.contact_img}`}
+                                    src={`static/images/${contact.contact_img}`}
                                     className="contact-img"
                                     alt={contact.contact_name}
                                 />
@@ -48,7 +48,7 @@ export default function Hero() {
                     </div>
 
                     <img
-                        src="images/alignAI-icon.png"
+                        src="static/images/alignAI-icon.png"
                         alt="AlignAI UI"
                         className="ui-image"
                     />
@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Connect and Sync Section */}
             <div className="in-container">
-                <img src="images/IN.png" alt="Connect and Sync" className="in" />
+                <img src="static/images/IN.png" alt="Connect and Sync" className="in" />
                 <p className="connect ft">Connect</p>
                 <p className="sync ft">Sync</p>
             </div>

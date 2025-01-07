@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
@@ -39,7 +39,7 @@ export default function Navbar() {
         <nav>
             <div className="navbar" style={menu ? { overflow: "visible" } : {}}>
                 <a className="logo" href="/">
-                    <img src="images/alignAI-icon.png" alt="Logo" />
+                    <img src="static/images/alignAI-icon.png" alt="Logo" />
                     <h3>
                         Align<span>AI</span>
                     </h3>

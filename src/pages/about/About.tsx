@@ -14,11 +14,11 @@ export default function About() {
                     <div className="co-sign">
                         <p>Trusted by the biggest companies</p>
                         <div className="companies">
-                            <img src="images/google.png" alt="Google" className="google" />
-                            <img src="images/meta.png" alt="Meta" className="meta" />
-                            <img src="images/a.png" alt="Company A" className="a" />
-                            <img src="images/nike.png" alt="Nike" className="nike" />
-                            <img src="images/microsoft.png" alt="Microsoft" className="microsoft" />
+                            <img src="static/images/google.png" alt="Google" className="google" />
+                            <img src="static/images/meta.png" alt="Meta" className="meta" />
+                            <img src="static/images/a.png" alt="Company A" className="a" />
+                            <img src="static/images/nike.png" alt="Nike" className="nike" />
+                            <img src="static/images/microsoft.png" alt="Microsoft" className="microsoft" />
                         </div>
                     </div>
                 </div>
