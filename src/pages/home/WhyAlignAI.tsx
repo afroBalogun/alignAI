@@ -39,7 +39,7 @@ export default function WhyAlignAI(){
     })
 
     return(
-        <div className="why-align" style={{backgroundImage: `url("static/images/background.png)`}}>
+        <div className="why-align" style={{backgroundImage: `url("static/images/background.png")`}}>
             <h3>Why Choose AlignAI?</h3>
             <div className="reasons-container">
                 {reasonsToChoose}
