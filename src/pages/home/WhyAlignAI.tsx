@@ -26,7 +26,7 @@ export default function WhyAlignAI(){
 
     const reasonsToChoose = reasons.map((reason) => {
         return (
-            <div key={reason.title} className="reason-to-choose" style={{backgroundImage: `url("static/images/background.png)`}}>
+            <div key={reason.title} className="reason-to-choose" >
                 <div className="img-container">
                     <img src={`static/images/${reason.icon}`} alt={reason.title} />
                 </div>
@@ -39,7 +39,7 @@ export default function WhyAlignAI(){
     })
 
     return(
-        <div className="why-align">
+        <div className="why-align" style={{backgroundImage: `url("static/images/background.png)`}}>
             <h3>Why Choose AlignAI?</h3>
             <div className="reasons-container">
                 {reasonsToChoose}
