@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
@@ -68,6 +69,11 @@ export default function Reviews() {
                     </div>
                 ))}
             </div>
+
+            {/* Book-A-Demo Button */}
+            <Link to="/book-a-demo">
+                    <button className="demo-btn">Book a Demo</button>
+            </Link>
         </div>
     );
 }

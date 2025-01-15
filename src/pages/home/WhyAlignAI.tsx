@@ -1,3 +1,5 @@
+import { Link } from "react-router"
+
 export default function WhyAlignAI(){
     const reasons = [
         {
@@ -42,6 +44,11 @@ export default function WhyAlignAI(){
             <div className="reasons-container">
                 {reasonsToChoose}
             </div>
+
+            {/* Book-A-Demo Button */}
+            <Link to="/book-a-demo">
+                    <button className="demo-btn">Book a Demo</button>
+            </Link>
         </div>
     )
 }
