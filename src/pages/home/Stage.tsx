@@ -46,7 +46,7 @@ export default function Stage(){
         }
     )
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1180);
+    const [isMobile] = useState(window.innerWidth <= 1180);
     
     const allStages = [
         {
