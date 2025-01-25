@@ -1,4 +1,54 @@
+import gsap from "gsap"
+import { useGSAP } from '@gsap/react';
+
+
 export default function About() {
+
+    gsap.registerPlugin(useGSAP);
+    useGSAP(
+        () => {
+            gsap.from(".about-us", { 
+                scale: 0.5, 
+                opacity: 0,
+                duration: .5
+            });
+            gsap.from(".desc", { 
+                opacity: 0, 
+                duration: 1,
+                delay: 1
+            });
+            gsap.from(".co-sign p", { 
+                opacity: 0 ,
+                duration: .5,
+                delay: 1.2
+            });
+            gsap.from(".companies img", {
+                opacity: 0,
+                duration: .5,
+                scale: .2,
+                ease: "back",
+                stagger: .2,
+                delay: 1.5
+            });
+            const tl = gsap.timeline();
+            tl.from(".stats", {
+                opacity: 0,
+                duration: 1,
+                delay: 2
+            });
+            tl.from(".stat h2", {
+                opacity: 0,
+                duration: .5,
+                scale: 1.2,
+                stagger: .5
+            })
+            .from(".stat p", {
+                opacity: 0,
+                duration: .5,
+            })
+        }
+    )
+
     return (
         <div className="about" id="about" style={{backgroundImage: `url("static/images/notexture-bg.jpg")`}}>
             <div className="about-text">

@@ -1,4 +1,29 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 export default function BookADemo() {
+    gsap.registerPlugin(useGSAP);
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".demo-container",
+                    start: "top 80%",
+                    markers: false,
+                }
+            });
+            tl.from(".demo-content", {
+                opacity: 0,
+                duration: .5,
+            });
+            tl.from(".demo-form", {
+                opacity: 0,
+                duration: .5,
+                scale: 1.2,
+                ease: "back",
+            });
+        }
+    );
     return (
         <div className="book-a-demo">
             <div className="demo-container">

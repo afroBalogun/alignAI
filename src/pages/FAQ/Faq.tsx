@@ -1,8 +1,42 @@
 import { useState } from "react";
 import { questions } from "../../assets/questions";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Faq() {
+    gsap.registerPlugin(useGSAP);
+    useGSAP(
+        () => {
+            const tl = gsap.timeline();
+            tl.from(".faq-header h2", {
+                opacity: 0,
+                scale: 1.2,
+                duration: .5,
+            });
+            tl.from(".faq-header p", {
+                opacity: 0,
+                duration: .5,
+            });
+
+            tl.from(".category", {
+                opacity: 0,
+                duration: .5,
+                stagger: .2,
+            });
+            tl.from(".faq-item", {
+                opacity: 0,
+                xPercent: -20,
+                duration: .5,
+                stagger: .3,
+            });
+            tl.from(".answer", {
+                opacity: 0,
+                duration: .5,
+            });
+        }
+    )
+
     const [showAnswers, setShowAnswers] = useState<Record<number, boolean>>({ 0: true });
     const [questionCategory, setQuestionCategory] = useState<string>("general");
 

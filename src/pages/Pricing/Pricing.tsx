@@ -1,7 +1,41 @@
 import  { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Pricing() {
+
+    gsap.registerPlugin(useGSAP);
+    useGSAP(
+        () => {
+            const tl = gsap.timeline();
+            tl.from(".plans-header", {
+                opacity: 0,
+                scale: 1.2,
+                duration: .5,
+            });
+            tl.from(".plans-text", {
+                opacity: 0,
+                duration: .5,
+            });
+            tl.from(".plan-btn-container", {
+                opacity: 0,
+                width: 0,
+                duration: .5,
+                height: 0,
+            });
+            tl.from(".plan-btn", {
+                opacity: 0,
+                duration: .5,
+            });
+            tl.from(".available-plans", {
+                opacity: 0,
+                duration: .5,
+                stagger: .5,
+            });
+        }
+    )
+
     const [monthly, setMonthly] = useState(true);
 
     const plans = [

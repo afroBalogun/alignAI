@@ -1,8 +1,38 @@
-import { Link } from "react-router"
+import { Link } from "react-router";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function WhyAlignAI(){
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+    useGSAP(
+        () => {
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".why-align",
+                    start: "top 30%",
+                    markers: false,
+                }
+            });
+
+            tl.from(".why-align-title", {
+                opacity: 0,
+                duration: .5,
+            });
+
+            tl.from(".reason-to-choose", {
+                opacity: 0,
+                scale: 1.2,
+                duration: .5,
+                ease: "back",
+                stagger: .5
+            })
+        })
+
     const reasons = [
-        {
+        {   
             title: "proven results.",
             description: "Over 65 projects successfully optimized to drive efficiency and growth.",
             icon: "proven.png"
@@ -40,7 +70,7 @@ export default function WhyAlignAI(){
 
     return(
         <div className="why-align" style={{backgroundImage: `url("static/images/background.png")`}}>
-            <h3>Why Choose AlignAI?</h3>
+            <h3 className="why-align-title">Why Choose AlignAI?</h3>
             <div className="reasons-container">
                 {reasonsToChoose}
             </div>

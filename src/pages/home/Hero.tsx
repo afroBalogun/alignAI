@@ -1,6 +1,62 @@
 import { Link } from "react-router";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Hero() {
+
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+    useGSAP(
+        () => {
+
+            gsap.from(
+                ".hero h2", {
+                    opacity: 0,
+                    scale: 1.2,
+                    duration: .5,
+                    delay: 1
+                }
+            )
+
+            gsap.from(
+                ".motto", {
+                    opacity: 0,
+                    duration: .5,
+                    delay: 1
+                }
+            )
+
+            gsap.from(
+                ".contact-bg", {
+                    opacity: 0,
+                    duration: 1,
+                    delay: 1
+                }
+            )
+
+            gsap.from(
+                ".hero-btn-container", {
+                    opacity: 0,
+                    duration: .5,
+                    delay: 1
+                }
+            )
+
+            gsap.from(
+                ".in-container", {
+                    scrollTrigger: {
+                        trigger: ".in-container",
+                        start: "-50% 30%",
+                        markers: false,
+                    },
+                    opacity: 0,
+                    scale: 1.2,
+                    ease: "back",
+                    duration: .5,
+                }
+            )})
+    
     const contacts = [
         { contact_name: "Ethan Maxwell", contact_img: "Ethan.png" },
         { contact_name: "Fatimah Blake", contact_img: "fatimah.png" },

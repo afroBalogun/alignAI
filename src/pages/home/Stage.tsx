@@ -1,4 +1,53 @@
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useState } from "react"
+
 export default function Stage(){
+
+    gsap.registerPlugin(useGSAP, ScrollTrigger)
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".stages-container",
+                    start: "top 30%",
+                    markers: false,
+                }
+            });
+            tl.from(".stages-container h2", {
+                opacity: 0,
+                duration: .5,
+            })
+            tl.from(".stages-container p", {
+                opacity: 0,
+                duration: .5,
+            })
+            tl.from(".desktop-stage", {
+                opacity: 0,
+                scale: 1.2,
+                duration: .5,
+                ease: "back",
+                stagger: .5
+            })
+            gsap.from(".mobile-stage", {
+                scrollTrigger: {
+                    trigger: ".mobile-stage",
+                    start: "-20% 30%",
+                    markers: false,
+                },
+                opacity: 0,
+                xPercent: -100,
+                duration: .5,
+                ease: "back",
+                stagger: .5,
+            })
+        }
+    )
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1180);
+    
     const allStages = [
         {
             stage: "Startups",
@@ -19,7 +68,7 @@ export default function Stage(){
 
     const stages = allStages.map((stage) => {
         return(
-            <div key={stage.stage} className="stage" >
+            <div key={stage.stage} className={`stage ${isMobile ? " mobile-stage" : " desktop-stage"}`} >
                 <h2 style={{backgroundColor: stage.bgColor}}>{stage.stage}</h2>
                 <p style={{backgroundColor: stage.bgColor}}> {stage.offer}</p>
             </div>

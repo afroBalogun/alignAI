@@ -2,13 +2,36 @@ import  { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Navbar() {
+
+    gsap.registerPlugin(useGSAP);
+    useGSAP(
+        () => {
+            gsap.from(".navbar", {
+                opacity: 0,
+                width: 0,
+                duration: 1,
+                ease: "back",
+                delay: 0.5
+            })
+
+            gsap.from("ul", {
+                opacity: 0,
+                scale: 1.2,
+                duration: 1,
+                ease: "power2",
+                delay: 1
+            })
+        }
+    )
+
     const [menu, setMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const handleMenu = () => setMenu((prevMenu) => !prevMenu);
-
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
 
     useEffect(() => {

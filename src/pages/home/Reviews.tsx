@@ -3,8 +3,36 @@ import { Link } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 export default function Reviews() {
+
+    gsap.registerPlugin(useGSAP);
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".reviews",
+                start: "top 80%",
+                markers: false,
+            },
+        });
+        tl.from(".review-title", {
+            opacity: 0,
+            duration: .5,
+        });
+        tl.from(".review-text", {
+            opacity: 0,
+            duration: .5,
+        });
+        tl.from(".review-card", {
+            opacity: 0,
+            duration: .5,
+            stagger: .5,
+        });
+    });
+
     const reviews = [
         {
             ratings: 4,

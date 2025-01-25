@@ -1,8 +1,21 @@
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function SignUp(){
+    gsap.registerPlugin(useGSAP);
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline();
+            tl.from(".login-tab", {
+                opacity: 0,
+                scale: .8,
+                duration: .2,
+            });
+        }
+    )
     return(
         <div className="sign-up-page">
             <div className="content">
